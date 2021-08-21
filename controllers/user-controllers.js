@@ -1,5 +1,5 @@
 const { User, Thought, Reaction } = require('../models');
-const { findOne } = require('../models/User');
+
 
  // POST /api/users
 const userController = {
@@ -54,7 +54,7 @@ const userController = {
   removeFriend({ params }, res) {
     console.log(params);
     // remove friendId from userID friend list
-    User.findOneAndDelete(
+    User.findOneAndUpdate(
         
         { _id: params.userId },
         { $pull: { friends: params.friendId } },
