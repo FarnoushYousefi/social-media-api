@@ -4,7 +4,7 @@ const user =require('../../controllers/user-controllers')
 router.route('/').post(user.createUser).get(user.findUsers);
 router.route('/:Id').get(user.findOne).delete(user.removeUser);
 
-router.route('/users/:userId/friends/:friendId').post(user.addFriend)
+router.route('/:userId/friends/:friendId').post(user.addFriend).delete(user.removeFriend)
 
 
 

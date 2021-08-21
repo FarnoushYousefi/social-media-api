@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/NetworkAPI', {
 });
 
 // Use this to log mongo queries being executed!
-mongoose.set('debug', true);
+// mongoose.set('debug', true);
 
 app.use(require('./routes'));
 
